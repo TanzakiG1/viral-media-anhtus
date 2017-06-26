@@ -48,8 +48,10 @@
     <div class="containers">
         <div class="row">
             <div class="col-sm-8">
-                <div id="list_gap">
+                <div id="list_gaps">
                     <?php
+                        $article_json= file_get_contents("media-items.json");
+                        $articles = (json_decode($article_json));
 
                     ?>
                 </div>
