@@ -52,7 +52,10 @@
                     <?php
                         $article_json= file_get_contents("media-items.json");
                         $articles = (json_decode($article_json));
-
+                        foreach ($articles as $article){
+                            echo"<div class='gaps-items'>";
+                            echo "<hr> </div>";
+                        }
                     ?>
                 </div>
             </div>
