@@ -54,7 +54,46 @@
                         $articles = (json_decode($article_json));
                         foreach ($articles as $article){
                             echo"<div class='gaps-items'>";
-                            echo "<hr> </div>";
+                            echo "<h4 class='gaps-title'> $article->title</h4>";
+                            if($article->type === "image"){
+                                echo"<div class='gaps-image'>
+                                    <img src='$article->media_source' alt=''>
+                                    </div>";
+                                echo"
+<div class='counts'>
+    <span class='like'>100 like</span>
+    -
+    <span class='comment'>100 comment</span>
+    <div class='actions'>
+        <div class='actions-turn-left'>
+             <span class='btn btn-default btn-like'>
+                <span class='glyphicon glyphicon-chevron-up'></span>
+             </span>
+             <span class='btn btn-default btn-unlike'>
+                <span class='glyphicon glyphicon-chevron-down'></span>
+        </span>
+            <span class='btn btn-default btn-comment'>
+                   <span class='glyphicon glyphicon-comment'></span>
+            </span>
+            </div>
+        <div class='action-turn-right'>
+            <span class='btn btn-default btn-facebook'>
+                <span class='glyphicon glyphicon-share share-facebook'></span>
+            </span>
+            <span class='btn btn-default btn-twitter'>
+                 <span class='glyphicon glyphicon-share share-twitter'></span>
+            </span>
+        </div>    
+    </div>
+</div>
+
+
+";
+
+
+                                                            }
+
+
                         }
                     ?>
                 </div>
