@@ -1,3 +1,21 @@
-.body{
+body {
+  .container{
+    .list_gaps{
+      .gaps-items{
+        max-width: 500px;
 
+        .gaps-image{
+          img{
+          width: 500px;
+            height: auto;
+          }
+        }
+        .count{
+          .actions{
+            max-width: 500px;
+          }
+        }
+      }
+    }
+  }
 }

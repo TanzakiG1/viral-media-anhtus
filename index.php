@@ -45,10 +45,10 @@
             </li>
         </ul>
     </div><!-- /.navbar-collapse -->
-    <div class="containers">
+    <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <div id="list_gaps">
+                <div class="list_gaps">
                     <?php
                         $article_json= file_get_contents("media-items.json");
                         $articles = (json_decode($article_json));
@@ -58,14 +58,14 @@
                             if($article->type === "image"){
                                 echo"<div class='gaps-image'>
                                     <img src='$article->media_source' alt=''>
-                                    </div>";
+                                    </div>";}
                                 echo"
 <div class='counts'>
     <span class='like'>100 like</span>
     -
     <span class='comment'>100 comment</span>
     <div class='actions'>
-        <div class='actions-turn-left'>
+        <div class='actions-turn-left pull-left'>
              <span class='btn btn-default btn-like'>
                 <span class='glyphicon glyphicon-chevron-up'></span>
              </span>
@@ -76,22 +76,19 @@
                    <span class='glyphicon glyphicon-comment'></span>
             </span>
             </div>
-        <div class='action-turn-right'>
+        <div class='action-turn-right pull-right' >
             <span class='btn btn-default btn-facebook'>
-                <span class='glyphicon glyphicon-share share-facebook'></span>
+                Facebook
             </span>
             <span class='btn btn-default btn-twitter'>
-                 <span class='glyphicon glyphicon-share share-twitter'></span>
+                 Twitter
             </span>
         </div>    
     </div>
 </div>
-
-
+    <div style='clear: both'></div>
 ";
 
-
-                                                            }
 
 
                         }
